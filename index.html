@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Central de Estudos</title>
+<meta name="theme-color" content="#1d5d8a">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icone-192.png">
+<link rel="apple-touch-icon" href="icone-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root { --bg:#eef1f3; --ink:#132029; --muted:#55636f; --accent:#1d5d8a; --bad:#b42323; --paper:#fbfcfd; --rule:#d2dae0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#10161b; --ink:#e3e9ee; --muted:#9aa8b3; --accent:#6fb0de; --bad:#f08080; --paper:#18212a; --rule:#2c3a45; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:Literata, Georgia, serif; }
+  body.carregando .topbar { display:none; }
+  .boot { max-width:520px; margin:12vh auto 0; padding:0 16px; line-height:1.5; }
+  .boot h1 { font-family:"Bricolage Grotesque", system-ui, sans-serif; font-size:28px; margin:0 0 12px; }
+  .boot input { width:100%; box-sizing:border-box; padding:12px; font-size:16px; border:1px solid var(--rule); border-radius:8px; background:var(--paper); color:var(--ink); margin:8px 0; }
+  .boot button { padding:12px 20px; font-size:16px; border:0; border-radius:8px; background:var(--accent); color:#fff; cursor:pointer; }
+  .boot a { color:var(--accent); }
+  .boot .erro { color:var(--bad); }
+  .boot .peq { color:var(--muted); font-size:14px; }
+  .boot details { margin-top:20px; color:var(--muted); font-size:15px; }
+  .barra { height:8px; background:var(--rule); border-radius:4px; overflow:hidden; }
+  .barra i { display:block; height:100%; width:0; background:var(--accent); transition:width .2s; }
+  .boot-aviso { position:fixed; left:50%; bottom:calc(16px + env(safe-area-inset-bottom)); transform:translateX(-50%); background:var(--ink); color:var(--bg); padding:10px 14px; border-radius:10px; font:15px system-ui, sans-serif; z-index:99; max-width:calc(100% - 32px); }
+  .boot-aviso button { margin-left:8px; background:var(--accent); color:#fff; border:0; border-radius:6px; padding:6px 10px; font:inherit; }
+</style>
+</head>
+<body class="carregando">
+<div class="topbar"><div class="tb-in"><nav class="crumbs" id="crumbs" aria-label="Onde você está"><a class="brand" href="#inicio">Central de Estudos</a></nav><div class="tb-ctl" id="tbctl"></div></div></div>
+<div id="view"><div class="boot"><p>Abrindo a Central de Estudos…</p></div></div>
+<script src="boot.js"></script>
+</body>
+</html>
